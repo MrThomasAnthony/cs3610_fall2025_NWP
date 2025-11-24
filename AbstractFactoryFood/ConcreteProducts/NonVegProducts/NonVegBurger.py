@@ -1,4 +1,4 @@
-from AbstractFactoryFood.Burger import Burger
+from AbstractFactoryFood.AbstractProducts.Burger import Burger
 
 class NonVegBurger(Burger):
     def __init__(self, price: int, calories: int, description: str):
