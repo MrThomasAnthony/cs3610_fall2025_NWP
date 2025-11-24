@@ -15,10 +15,6 @@ class CustomerDirector:
         self._builder = builder
 
     def build_customer_profile(self, data: Dict[str, Any]) -> None:
-        """
-        Constructs the object according to the requested order:
-        FN -> MN -> LN -> Email1 -> Email2 -> Phone1 -> Phone2
-        """
         self.builder.build_first_name(data.get("first_name"))
         self.builder.build_middle_name(data.get("middle_name"))
         self.builder.build_last_name(data.get("last_name"))

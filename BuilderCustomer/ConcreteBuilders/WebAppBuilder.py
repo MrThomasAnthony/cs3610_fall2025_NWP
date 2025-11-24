@@ -1,4 +1,3 @@
-from abc import ABC, abstractmethod
 from BuilderInterface.ICustomerBuilder import ICustomerBuilder
 from Product.Customer import Customer
 
