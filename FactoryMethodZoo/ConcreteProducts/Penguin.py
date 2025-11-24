@@ -1,4 +1,4 @@
-from FactoryMethodZoo.ProductInterface.IAnimal import IAnimal
+from ProductInterface.IAnimal import IAnimal
 
 class Penguin(IAnimal):
     def SAY_SOMETHING(self) -> str:
