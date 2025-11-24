@@ -1,6 +1,6 @@
-from AbstractFactoryFood.VegBurger import VegBurger
+from AbstractFactoryFood.Cutlet import Cutlet
 
-class VegBurger(VegBurger):
+class NonVegCutlet(Cutlet):
     def __init__(self, price: int, calories: int, description: str):
         self._price = price
         self._calories = calories
@@ -11,6 +11,3 @@ class VegBurger(VegBurger):
 
     def get_description(self) -> str:
         return self._description
-    
-    def showVegBurgerAdver() -> str:
-        return "Try our delicious and healthy Veg Burger!"

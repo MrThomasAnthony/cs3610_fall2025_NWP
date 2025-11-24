@@ -14,4 +14,4 @@ class VegPizza(Pizza):
         return self._description
     
     def showVegPizzaAdver() -> str:
-        return "Try our delicious Veg Pizza, loaded with fresh vegetables and a blend of spices!"
+        return "Try our delicious Veg Pizza!"
