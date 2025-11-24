@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
-from AbstractFactoryFood.AbstractProducts.Burger import Burger
-from AbstractFactoryFood.AbstractProducts.Pizza import Pizza
-from AbstractFactoryFood.AbstractProducts.Noodles import Noodles
-from AbstractFactoryFood.AbstractProducts.Cutlet import Cutlet
+from AbstractProducts.Burger import Burger
+from AbstractProducts.Pizza import Pizza
+from AbstractProducts.Noodles import Noodles
+from AbstractProducts.Cutlet import Cutlet
 
 class FoodFactory(ABC):
     @abstractmethod

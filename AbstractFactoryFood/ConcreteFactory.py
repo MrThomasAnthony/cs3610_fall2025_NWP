@@ -1,31 +1,35 @@
-from AbstractFactoryFood.AbstractFactoryInterface import FoodFactory
-from AbstractFactoryFood.AbstractProducts.Burger import Burger
-from AbstractFactoryFood.AbstractProducts.Pizza import Pizza
-from AbstractFactoryFood.AbstractProducts.Noodles import Noodles
-from AbstractFactoryFood.AbstractProducts.Cutlet import Cutlet
+from AbstractFactoryInterface import FoodFactory
+from ConcreteProducts.VegProducts.VegBurger import VegBurger
+from ConcreteProducts.VegProducts.VegPizza import VegPizza
+from ConcreteProducts.VegProducts.VegNoodles import VegNoodles
+from ConcreteProducts.VegProducts.VegCutlet import VegCutlet
+from ConcreteProducts.NonVegProducts.NonVegBurger import NonVegBurger
+from ConcreteProducts.NonVegProducts.NonVegPizza import NonVegPizza
+from ConcreteProducts.NonVegProducts.NonVegNoodles import NonVegNoodles
+from ConcreteProducts.NonVegProducts.NonVegCutlet import NonVegCutlet
 
 class VegetarianFactory(FoodFactory):
-    def create_burger(self) -> Burger:
-        return VegBurger(9.99, 350, "A delicious vegetarian burger made with fresh vegetables and a tangy sauce.")
+    def create_burger(self) -> VegBurger:
+        return VegBurger()
 
-    def create_pizza(self) -> Pizza:
-        return VegPizza(12.99, 500, "Medium", "A delightful vegetarian pizza topped with fresh veggies and mozzarella cheese.")
+    def create_pizza(self) -> VegPizza:
+        return VegPizza()
 
-    def create_noodles(self) -> Noodles:
-        return VegNoodles(10.99, 400, "A tasty bowl of vegetarian noodles cooked with fresh vegetables and flavorful spices.")
+    def create_noodles(self) -> VegNoodles:
+        return VegNoodles()
 
-    def create_cutlet(self) -> Cutlet:
-        return VegCutlet(14.99, 450, "A crispy and savory vegetarian cutlet made with a blend of vegetables and spices.")
+    def create_cutlet(self) -> VegCutlet:
+        return VegCutlet()
 
 class NonVegetarianFactory(FoodFactory):
-    def create_burger(self) -> Burger:
-        return NonVegBurger(13.99, 600, "A mouth-watering non-vegetarian burger made with juicy chicken patty and special sauce.")
+    def create_burger(self) -> NonVegBurger:
+        return NonVegBurger()
 
-    def create_pizza(self) -> Pizza:
-        return NonVegPizza(15.99, 700, "Large", "A scrumptious non-vegetarian pizza loaded with chicken, pepperoni, and cheese.")
+    def create_pizza(self) -> NonVegPizza:
+        return NonVegPizza()
 
-    def create_noodles(self) -> Noodles:
-        return NonVegNoodles(12.99, 550, "A flavorful bowl of non-vegetarian noodles cooked with chicken and aromatic spices.")
+    def create_noodles(self) -> NonVegNoodles:
+        return NonVegNoodles()
 
-    def create_cutlet(self) -> Cutlet:
-        return NonVegCutlet(17.99, 650, "A delicious non-vegetarian cutlet made with minced chicken and a blend of spices.")
+    def create_cutlet(self) -> NonVegCutlet:
+        return NonVegCutlet()

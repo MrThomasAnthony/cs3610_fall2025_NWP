@@ -1,4 +1,4 @@
-from AbstractFactoryFood.AbstractProducts.Cutlet import Cutlet
+from AbstractProducts.Cutlet import Cutlet
 
 class NonVegCutlet(Cutlet):
     def __init__(self, price = 12.99, calories = 780, description = "This is a tasty Non-Veg Cutlet"):
