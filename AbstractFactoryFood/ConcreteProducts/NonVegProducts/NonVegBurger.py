@@ -1,7 +1,7 @@
 from AbstractFactoryFood.AbstractProducts.Burger import Burger
 
 class NonVegBurger(Burger):
-    def __init__(self, price: int, calories: int, description: str):
+    def __init__(self, price = 8.99, calories = 650, description = "This is a tasty Non-Veg Burger"):
         self._price = price
         self._calories = calories
         self._description = description
