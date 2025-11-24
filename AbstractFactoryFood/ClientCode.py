@@ -21,7 +21,7 @@ def main():
     non_veg_client_code(NonVegetarianFactory())
     
     for food in AvailableFood:
-        print("1) Price: " + str(food.get_price()) + ", Description: " + food.get_description())
+        print("Price: " + str(food.get_price()) + ", Description: " + food.get_description())
     
 if __name__ == "__main__":
     main()
