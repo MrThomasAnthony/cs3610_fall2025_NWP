@@ -1,14 +1,13 @@
 from ConcreteCreator import TorontoZoo, CalgaryZoo
 
 def main():
-    # Client Code
     print("--- Visiting Toronto ---")
-    toronto = TorontoZoo()
-    toronto.open_zoo()
+    toronto = TorontoZoo.TorontoZoo()
+    toronto.startVisit()
 
     print("--- Visiting Calgary ---")
-    calgary = CalgaryZoo()
-    calgary.open_zoo()
+    calgary = CalgaryZoo.CalgaryZoo()
+    calgary.startVisit()
 
 if __name__ == "__main__":
     main()

@@ -6,7 +6,9 @@ from ConcreteProducts import Elephant, GrizzlyBear, Lion, Moose, Penguin, WhiteB
 
 class Zoo(ABC):
     def __init__(self):
-        self.animals: List[IAnimal] = self.create_animals()
+        # Call the concrete creator's implementation. Concrete creators
+        # implement `create_Animals` (capital A) so call that here.
+        self.animals: List[IAnimal] = self.create_Animals()
         self.ourItinerary = self.get_itinerary()
         
     @abstractmethod
@@ -26,7 +28,7 @@ class Zoo(ABC):
     def startVisit(self) -> str:
         print("-" * 30)
         print(self.ourItinerary)
-        print("Listen to our animals:")
+        print("\nListen to our animals:")
         print(self.askEachAnimalToSaySomething())
         print("-" * 30)
         print("\n")

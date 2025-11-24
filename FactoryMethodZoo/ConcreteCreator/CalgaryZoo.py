@@ -1,7 +1,9 @@
 from typing import List
 
 from ProductInterface.IAnimal import IAnimal
-from ConcreteProducts import Penguin, GrizzlyBear, Moose
+from ConcreteProducts.Penguin import Penguin
+from ConcreteProducts.GrizzlyBear import GrizzlyBear
+from ConcreteProducts.Moose import Moose
 
 from CreatorInterface.IZoo import Zoo
 
@@ -14,4 +16,4 @@ class CalgaryZoo(Zoo):
         ]
 
     def get_itinerary(self) -> str:
-        return "Welcome to the Calgary Zoo! Our Itinerary: 1) Penguin Plunge. 2) Wild Canada."
+        return "Welcome to the Calgary Zoo! Our Itinerary: \n1) Penguin Plunge. \n2) Wild Canada."
