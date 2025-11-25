@@ -9,27 +9,27 @@ from ConcreteProducts.NonVegProducts.NonVegNoodles import NonVegNoodles
 from ConcreteProducts.NonVegProducts.NonVegCutlet import NonVegCutlet
 
 class VegetarianFactory(FoodFactory):
-    def create_burger(self) -> VegBurger:
-        return VegBurger()
+    def create_burger(self, price: float, calories: int, descr: str) -> VegBurger:
+        return VegBurger(price, calories, descr)
 
-    def create_pizza(self) -> VegPizza:
-        return VegPizza()
+    def create_pizza(self, price: float, calories: int, size: str, descr: str) -> VegPizza:
+        return VegPizza(price, calories, descr, size)
 
-    def create_noodles(self) -> VegNoodles:
-        return VegNoodles()
+    def create_noodles(self, price: float, calories: int, descr: str) -> VegNoodles:
+        return VegNoodles(price, calories, descr)
 
-    def create_cutlet(self) -> VegCutlet:
-        return VegCutlet()
+    def create_cutlet(self, price: float, calories: int, descr: str) -> VegCutlet:
+        return VegCutlet(price, calories, descr)
 
 class NonVegetarianFactory(FoodFactory):
-    def create_burger(self) -> NonVegBurger:
-        return NonVegBurger()
+    def create_burger(self, price: float, calories: int, descr: str) -> NonVegBurger:
+        return NonVegBurger(price, calories, descr)
 
-    def create_pizza(self) -> NonVegPizza:
-        return NonVegPizza()
+    def create_pizza(self, price: float, calories: int, size: str, descr: str) -> NonVegPizza:
+        return NonVegPizza(price, calories, descr, size)
 
-    def create_noodles(self) -> NonVegNoodles:
-        return NonVegNoodles()
+    def create_noodles(self, price: float, calories: int, descr: str) -> NonVegNoodles:
+        return NonVegNoodles(price, calories, descr)
 
-    def create_cutlet(self) -> NonVegCutlet:
-        return NonVegCutlet()
+    def create_cutlet(self, price: float, calories: int, descr: str) -> NonVegCutlet:
+        return NonVegCutlet(price, calories, descr)

@@ -1,10 +1,16 @@
-from abc import ABC, abstractmethod
+from IProduct import IProduct
 
-class Pizza(ABC):
-    @abstractmethod
+class Pizza(IProduct):
+    def __init__ (self):
+        self._price = 0
+        self._calories = 0
+        self._descr = ""
+        self._size = "small"
+        
     def get_price(self) -> int:
-        pass
+        return self._price
     
-    @abstractmethod
     def get_description(self) -> str:
-        pass
+        return self._descr
+    
+    
