@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
 class IProduct(ABC):
-    @astractmethod
-    get_price(self) -> int:
+    @abstractmethod
+    def get_price(self) -> float:
         pass
     
     @abstractmethod

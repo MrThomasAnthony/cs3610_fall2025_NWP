@@ -2,12 +2,9 @@ from abc import ABC, abstractmethod
 from typing import List
 
 from ProductInterface.IAnimal import IAnimal
-from ConcreteProducts import Elephant, GrizzlyBear, Lion, Moose, Penguin, WhiteBear
 
 class Zoo(ABC):
     def __init__(self):
-        # Call the concrete creator's implementation. Concrete creators
-        # implement `create_Animals` (capital A) so call that here.
         self.animals: List[IAnimal] = self.create_Animals()
         self.ourItinerary = self.get_itinerary()
         

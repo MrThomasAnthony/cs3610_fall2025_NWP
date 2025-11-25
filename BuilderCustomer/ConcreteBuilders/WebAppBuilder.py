@@ -1,0 +1,36 @@
+from BuilderInterface.ICustomerBuilder import ICustomerBuilder
+from Product.Customer import Customer
+
+class WebAppBuilder(ICustomerBuilder):
+    def __init__(self) -> None:
+        self.reset()
+
+    def reset(self) -> None:
+        self._customer = Customer()
+
+    @property
+    def customer(self) -> Customer:
+        product = self._customer
+        self.reset()
+        return product
+
+    def build_first_name(self, first_name: str) -> None:
+        self._customer.first_name = first_name
+
+    def build_middle_name(self, middle_name: str) -> None:
+        self._customer.middle_name = middle_name
+
+    def build_last_name(self, last_name: str) -> None:
+        self._customer.last_name = last_name
+
+    def build_primary_email(self, email: str) -> None:
+        self._customer.primary_email = email
+
+    def build_secondary_email(self, email: str) -> None:
+        self._customer.secondary_email = email
+
+    def build_primary_mobile(self, number: str) -> None:
+        self._customer.primary_mobile = number
+
+    def build_secondary_mobile(self, number: str) -> None:
+        self._customer.secondary_mobile = number
