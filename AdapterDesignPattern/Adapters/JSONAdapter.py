@@ -7,5 +7,5 @@ class JSONAdapter(FinancialDataProvider):
         self.adaptee = adaptee
 
     def get_financial_data(self) -> str:
-        # Get data from json adaptee - already in json format
+        # Get data from json adaptee already in json format
         return self.adaptee.fetch_credit_history_json()
